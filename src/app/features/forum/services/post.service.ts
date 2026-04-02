@@ -7,7 +7,7 @@ import{Comment} from'./../models/post.model'
 import { BackendPost } from './forum.service';
 @Injectable({ providedIn: 'root' })
 export class PostService {
-  private http = inject(HttpClient);
+  constructor(private http: HttpClient) {};
 
   private readonly API_URL = 'http://localhost:3001';
 
